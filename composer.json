@@ -1,0 +1,26 @@
+{
+  "name": "sifo/sifo-playground",
+  "description": "Playground APP using SIFO Framework",
+  "license": "Apache-2.0",
+  "keywords": [],
+  "homepage": "https://github.com/sifophp/SIFO",
+  "type": "project",
+  "require": {
+    "php": ">=7.1",
+    "sifophp/sifo": "^2.22"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sifo\\Playground\\": "instances/sifoplayground/src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sifo\\Playground\\Tests\\": "instances/sifoplayground/tests/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}
