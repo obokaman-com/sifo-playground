@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>{{ page_title }}</title>
+</head>
+<body><p>Page: <strong>{{ page_title }}</strong>, managed by <code>{{ controller }}</code></p>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/example">Example (with-cache)</a></li>
+    <li><a href="/example:nocache">Example (without-cache)</a></li>
+    <li><a href="/json">JSON answer</a></li>
+    <li><a href="/redirect?code=301">Redirect 301</a></li>
+    <li><a href="/redirect?code=302">Redirect 302</a></li>
+    <li><a href="/exception?code=401">Error 401</a></li>
+    <li><a href="/exception?code=403">Error 403</a></li>
+    <li><a href="/exception?code=500">Error 500</a></li>
+    <li><a href="/kjadsfkjagjfhga">Non existing URL</a></li>
+</ul>
+
+<hr>
+<h3>Main template:</h3>
+<p>This page was generated at {{ 'now'|date('Y-m-d H:i:s') }}</p>
+<hr>
+<h3>Pre-rendered module:</h3>
+{{ modules.time }}
+<hr>
+<h3>Real-time module:</h3>
+<!-- REPLACE:Sifo\Playground\Infrastructure\Ui\Module\CurrentTime -->
+</body>
+</html>

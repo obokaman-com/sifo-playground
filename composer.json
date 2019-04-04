@@ -5,9 +5,15 @@
   "keywords": [],
   "homepage": "https://github.com/sifophp/SIFO",
   "type": "project",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/uvinum/SIFO"
+    }
+  ],
   "require": {
-    "php": ">=7.1",
-    "sifophp/sifo": "^2.22"
+    "php": ">=7.2",
+    "sifophp/sifo": "dev-psr7-request-response"
   },
   "autoload": {
     "psr-4": {

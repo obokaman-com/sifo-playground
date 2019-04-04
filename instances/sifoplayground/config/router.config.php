@@ -27,17 +27,21 @@
 // ____________________________________________________________________________
 
 // When the router doesn't know what to do with the URL, who is going to handle it?:
-use Sifo\Playground\Infrastructure\Ui\Controller\{Home, NotFound, Example};
+use Common\StaticIndexController;
+use Sifo\Playground\Infrastructure\Ui\Controller\{Error, Example, Home, Json, Redirect};
 
 // Rebuild/regenerate the configuration files:
-$config['rebuild']      = 'manager/rebuild';
+$config['rebuild'] = 'manager/rebuild';
 
 // Sifo debug
 $config['sifo-debug-analyzer'] = 'debug/analyzer';
-$config['sifo-debug-actions']  = 'debug/actions';
+$config['sifo-debug-actions'] = 'debug/actions';
 
 // APP ROUTES
-$config['__NO_ROUTE_FOUND__'] = NotFound::class;
+$config['__NO_ROUTE_FOUND__'] = StaticIndexController::class;
 $config['__HOME__'] = Home::class;
-$config['example-route'] = Example::class;
+$config['example'] = Example::class;
+$config['redirect'] = Redirect::class;
+$config['exception'] = Error::class;
+$config['json'] = Json::class;
 

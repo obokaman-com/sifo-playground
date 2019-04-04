@@ -1,0 +1,1 @@
+{extends file='error/common.tpl'|custom_tpl}
