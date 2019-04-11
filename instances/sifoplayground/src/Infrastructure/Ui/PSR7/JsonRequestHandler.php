@@ -23,9 +23,10 @@ class JsonRequestHandler implements RequestHandlerInterface
     private function getUrl(ServerRequestInterface $request): string
     {
         return sprintf(
-            '%s://%s%s',
+            '%s://%s:%s%s',
             $request->getUri()->getScheme(),
             $request->getUri()->getHost(),
+            $request->getUri()->getPort(),
             $request->getUri()->getPath()
         );
     }

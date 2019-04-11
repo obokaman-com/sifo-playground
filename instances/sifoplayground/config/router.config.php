@@ -32,6 +32,7 @@ use Sifo\Playground\Infrastructure\Ui\Controller\{Error, Example, Home, Json, Re
 use Sifo\Playground\Infrastructure\Ui\PSR7\ErrorResponseHandler;
 use Sifo\Playground\Infrastructure\Ui\PSR7\HomeRequestHandler;
 use Sifo\Playground\Infrastructure\Ui\PSR7\JsonRequestHandler;
+use Sifo\Playground\Infrastructure\Ui\PSR7\RedirectRequestHandler;
 
 // Rebuild/regenerate the configuration files:
 $config['rebuild'] = 'manager/rebuild';
@@ -46,7 +47,7 @@ $config['__HOME__'] = Home::class;
 $config['psr7'] = HomeRequestHandler::class;
 $config['example'] = Example::class;
 $config['redirect'] = Redirect::class;
-$config['psr7-redirect'] = Redirect::class;
+$config['psr7-redirect'] = RedirectRequestHandler::class;
 $config['exception'] = Error::class;
 $config['json'] = Json::class;
 $config['psr7-json'] = JsonRequestHandler::class;
