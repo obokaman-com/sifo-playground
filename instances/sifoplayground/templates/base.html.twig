@@ -5,14 +5,21 @@
 <body><p>Page: <strong>{{ page_title }}</strong>, managed by <code>{{ controller }}</code></p>
 <ul>
     <li><a href="/">Home</a></li>
+    <li><a href="/psr7">Home PSR-7</a></li>
     <li><a href="/example">Example (with-cache)</a></li>
     <li><a href="/example:nocache">Example (without-cache)</a></li>
     <li><a href="/json">JSON answer</a></li>
+    <li><a href="/psr7-json">JSON answer PSR-7</a></li>
     <li><a href="/redirect?code=301">Redirect 301</a></li>
     <li><a href="/redirect?code=302">Redirect 302</a></li>
+    <li><a href="/psr7-redirect?code=301">Redirect 301 PSR-7</a></li>
+    <li><a href="/psr7-redirect?code=302">Redirect 302 PSR-7</a></li>
     <li><a href="/exception?code=401">Error 401</a></li>
     <li><a href="/exception?code=403">Error 403</a></li>
     <li><a href="/exception?code=500">Error 500</a></li>
+    <li><a href="/psr-exception?code=401">Error 401 PSR-7</a></li>
+    <li><a href="/psr-exception?code=403">Error 403 PSR-7</a></li>
+    <li><a href="/psr-exception?code=500">Error 500 PSR-7</a></li>
     <li><a href="/kjadsfkjagjfhga">Non existing URL</a></li>
 </ul>
 
