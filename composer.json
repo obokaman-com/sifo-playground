@@ -13,7 +13,10 @@
   ],
   "require": {
     "php": ">=7.2",
-    "sifophp/sifo": "dev-psr7-request-response"
+    "psr/http-server-handler": "^1.0",
+    "psr/http-server-middleware": "^1.0",
+    "sifophp/sifo": "dev-psr7-request-response",
+    "zendframework/zend-diactoros": "^2.1"
   },
   "autoload": {
     "psr-4": {
@@ -28,5 +31,8 @@
   "config": {
     "optimize-autoloader": true,
     "sort-packages": true
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^4.2"
   }
 }

@@ -29,6 +29,9 @@
 // When the router doesn't know what to do with the URL, who is going to handle it?:
 use Common\StaticIndexController;
 use Sifo\Playground\Infrastructure\Ui\Controller\{Error, Example, Home, Json, Redirect};
+use Sifo\Playground\Infrastructure\Ui\PSR7\ErrorResponseHandler;
+use Sifo\Playground\Infrastructure\Ui\PSR7\HomeRequestHandler;
+use Sifo\Playground\Infrastructure\Ui\PSR7\JsonRequestHandler;
 
 // Rebuild/regenerate the configuration files:
 $config['rebuild'] = 'manager/rebuild';
@@ -40,8 +43,12 @@ $config['sifo-debug-actions'] = 'debug/actions';
 // APP ROUTES
 $config['__NO_ROUTE_FOUND__'] = StaticIndexController::class;
 $config['__HOME__'] = Home::class;
+$config['psr7'] = HomeRequestHandler::class;
 $config['example'] = Example::class;
 $config['redirect'] = Redirect::class;
+$config['psr7-redirect'] = Redirect::class;
 $config['exception'] = Error::class;
 $config['json'] = Json::class;
+$config['psr7-json'] = JsonRequestHandler::class;
+$config['psr7-exception'] = ErrorResponseHandler::class;
 
