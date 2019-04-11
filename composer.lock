@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70a1fe6e67c00f49807ad70c9524420e",
+    "content-hash": "963fdb56cc5f76837276510285c62f27",
     "packages": [
         {
             "name": "geoip/geoip",
@@ -434,11 +434,16 @@
         {
             "name": "sifophp/sifo",
             "version": "dev-psr7-request-response",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uvinum/SIFO.git",
+                "reference": "5c154c171bced3a202d09fe9a11badeb7a3bbaa3"
+            },
             "dist": {
-                "type": "path",
-                "url": "SIFO",
-                "reference": "60d40aa72414e4bbd61daedfbf03d3af28eb8f35",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/uvinum/SIFO/zipball/5c154c171bced3a202d09fe9a11badeb7a3bbaa3",
+                "reference": "5c154c171bced3a202d09fe9a11badeb7a3bbaa3",
+                "shasum": ""
             },
             "require": {
                 "ext-json": "*",
@@ -447,12 +452,15 @@
                 "php": ">=7.1",
                 "phpmailer/phpmailer": "^5.2",
                 "psr/container": "^1.0",
+                "psr/http-server-handler": "^1.0",
+                "psr/http-server-middleware": "^1.0",
                 "sifophp/sifo-common-instance": "^2.14",
                 "smarty/smarty": "^3.1",
                 "symfony/yaml": "^3.2",
                 "tpyo/amazon-s3-php-class": "^0.5",
                 "twig/extensions": "^1.4",
-                "twig/twig": "^2.0"
+                "twig/twig": "^2.0",
+                "zendframework/zend-diactoros": "^2.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.0",
@@ -486,8 +494,10 @@
                 "php"
             ],
             "support": {
-                "issues": "https://github.com/sifophp/SIFO/issues"
-            }
+                "issues": "https://github.com/sifophp/SIFO/issues",
+                "source": "https://github.com/uvinum/SIFO/tree/psr7-request-response"
+            },
+            "time": "2019-04-11T19:40:50+00:00"
         },
         {
             "name": "sifophp/sifo-common-instance",

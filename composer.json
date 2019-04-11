@@ -7,15 +7,15 @@
   "type": "project",
   "repositories": [
     {
-      "type": "path",
-      "url": "SIFO"
+      "type": "vcs",
+      "url": "https://github.com/uvinum/SIFO"
     }
   ],
   "require": {
     "php": ">=7.2",
     "psr/http-server-handler": "^1.0",
     "psr/http-server-middleware": "^1.0",
-    "sifophp/sifo": "@dev",
+    "sifophp/sifo": "dev-psr7-request-response",
     "zendframework/zend-diactoros": "^2.1"
   },
   "autoload": {
