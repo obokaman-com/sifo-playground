@@ -6,7 +6,7 @@ use Sifo\Controller;
 
 class CurrentTime extends Controller
 {
-    public function build()
+    public function build(): void
     {
         $this->setLayout('time.html.twig');
     }

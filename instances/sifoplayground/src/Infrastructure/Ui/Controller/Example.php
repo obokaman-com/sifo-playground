@@ -9,11 +9,11 @@ use Sifo\Playground\Infrastructure\Ui\Module\CurrentTime;
 
 final class Example extends Controller
 {
-    public function build()
+    public function build(): void
     {
         $this->setLayout('base.html.twig');
         $this->assign('page_title', 'EXAMPLE ROUTE');
-        $this->assign('controller', static::class);
+        $this->assign('controller', __CLASS__);
 
         $this->addModule('time', CurrentTime::class);
     }
@@ -24,6 +24,6 @@ final class Example extends Controller
             return false;
         }
 
-        return static::class;
+        return __CLASS__;
     }
 }

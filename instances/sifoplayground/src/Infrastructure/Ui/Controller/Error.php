@@ -7,7 +7,7 @@ use Sifo\FilterGet;
 
 class Error extends Controller
 {
-    public function build()
+    public function build(): void
     {
         $exception_code = (int) FilterGet::getInstance()->getString('code');
 

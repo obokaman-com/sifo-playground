@@ -1,29 +1,37 @@
 <html>
 <head>
     <title>{{ page_title }}</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body><p>Page: <strong>{{ page_title }}</strong>, managed by <code>{{ controller }}</code></p>
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/example">Example (with-cache)</a></li>
-    <li><a href="/example:nocache">Example (without-cache)</a></li>
-    <li><a href="/json">JSON answer</a></li>
-    <li><a href="/redirect?code=301">Redirect 301</a></li>
-    <li><a href="/redirect?code=302">Redirect 302</a></li>
-    <li><a href="/exception?code=401">Error 401</a></li>
-    <li><a href="/exception?code=403">Error 403</a></li>
-    <li><a href="/exception?code=500">Error 500</a></li>
-    <li><a href="/kjadsfkjagjfhga">Non existing URL</a></li>
-</ul>
+<body>
+<div class="p-12 max-w-xl mx-auto">
+    <p class="text-2xl">Page: <strong>{{ page_title }}</strong></p>
+    <p class="text-xs text-gray-500">managed by <code>{{ controller }}</code></p>
+    <ul class="border my-4 rounded-lg divide-y">
+        <li><a class="block px-4 py-2" href="/">Home</a></li>
+        <li><a class="block px-4 py-2" href="/example">Example (with-cache)</a></li>
+        <li><a class="block px-4 py-2" href="/example:nocache">Example (without-cache)</a></li>
+        <li><a class="block px-4 py-2" href="/json">JSON answer</a></li>
+        <li><a class="block px-4 py-2" href="/redirect?code=301">Redirect 301</a></li>
+        <li><a class="block px-4 py-2" href="/redirect?code=302">Redirect 302</a></li>
+        <li><a class="block px-4 py-2" href="/exception?code=401">Error 401</a></li>
+        <li><a class="block px-4 py-2" href="/exception?code=403">Error 403</a></li>
+        <li><a class="block px-4 py-2" href="/exception?code=500">Error 500</a></li>
+        <li><a class="block px-4 py-2" href="/kjadsfkjagjfhga">Non existing URL</a></li>
+    </ul>
 
-<hr>
-<h3>Main template:</h3>
-<p>This page was generated at {{ 'now'|date('Y-m-d H:i:s') }}</p>
-<hr>
-<h3>Pre-rendered module:</h3>
-{{ modules.time }}
-<hr>
-<h3>Real-time module:</h3>
-<!-- REPLACE:Sifo\Playground\Infrastructure\Ui\Module\CurrentTime -->
+    <div class="my-4">
+        <h3 class="font-bold">Main template:</h3>
+        <p>This page was generated at {{ 'now'|date('Y-m-d H:i:s') }}</p>
+    </div>
+    <div class="my-4">
+        <h3 class="font-bold">Pre-rendered module:</h3>
+        {{ modules.time }}
+    </div>
+    <div class="my-4">
+        <h3 class="font-bold">Real-time module:</h3>
+        <!-- REPLACE:Sifo\Playground\Infrastructure\Ui\Module\CurrentTime -->
+    </div>
+</div>
 </body>
 </html>

@@ -9,11 +9,11 @@ use Sifo\Playground\Infrastructure\Ui\Module\CurrentTime;
 
 final class Home extends Controller
 {
-    public function build()
+    public function build(): void
     {
         $this->setLayout('base.html.twig');
         $this->assign('page_title', 'HOME');
-        $this->assign('controller', static::class);
+        $this->assign('controller', __CLASS__);
 
         $this->addModule('time', CurrentTime::class);
     }
