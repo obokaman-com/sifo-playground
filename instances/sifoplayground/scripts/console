@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Example execution: $ instances/sifoplayground/scripts/console Sifo\\Playground\\Infrastructure\\Ui\\Console\\Example localhost -v
+ * Description: $ <console script path> <FQN of console controller to execute> <hostname to simulate> <optional script parameters>
+ */
+
+use Common\SharedCommandLineController;
+use Sifo\CLBootstrap;
+
+define('ROOT_PATH', __DIR__ . '/../../../');
+
+require_once ROOT_PATH . '/vendor/autoload.php';
+
+$classname = $argv[1];
+
+array_splice($argv, 1, 1);
+
+if (false === strpos($classname, '\\')) {
+    $classname = __NAMESPACE__ . '\\' . $classname;
+}
+
+if (!class_exists($classname)) {
+    throw new RuntimeException($classname . ' does not exists.');
+}
+
+require ROOT_PATH . '/vendor/sifophp/sifo/src/Sifo/CLBootstrap.php';
+
+if (!is_subclass_of($classname, SharedCommandLineController::class)) {
+    throw new \InvalidArgumentException(
+        '"' . $classname . '" is not a valid command line controller. ' .
+        'Given controllers should extend from ' . SharedCommandLineController::class . '.'
+    );
+}
+
+CLBootstrap::$script_controller = $classname;
+CLBootstrap::execute();
