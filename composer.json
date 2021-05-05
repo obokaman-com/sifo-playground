@@ -11,12 +11,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Sifo\\Playground\\": "instances/sifoplayground/src/"
+      "Sifo\\Playground\\": "src/Playground"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Sifo\\Playground\\Tests\\": "instances/sifoplayground/tests/"
+      "Sifo\\Playground\\Tests\\": "tests/Playground"
     }
   },
   "config": {
